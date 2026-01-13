@@ -121,6 +121,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -128,12 +130,15 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: -1px;
+    min-width: auto;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 3rem;
+    flex: 1;
+    margin-left: 3rem;
 }
 
 .nav-links a {
@@ -142,6 +147,7 @@ body {
     transition: var(--transition);
     font-weight: 500;
     font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -158,6 +164,7 @@ body {
     transition: var(--transition);
     border: none;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-cta:hover {
@@ -178,6 +185,7 @@ body {
     position: relative;
     width: 50px;
     height: 40px;
+    margin-left: 1rem;
 }
 
 .theme-toggle:hover {
@@ -572,18 +580,25 @@ section {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .navbar .container {
+        gap: 1rem;
+        flex-wrap: nowrap;
+    }
+
     .nav-links {
         position: fixed;
         right: 0;
         top: 60px;
         height: calc(100vh - 60px);
-        background-color: var(--secondary-color);
+        background-color: var(--bg-light);
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 60%;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         padding-top: 2rem;
+        flex: none;
+        margin-left: 0;
     }
 
     .nav-links.active {
@@ -594,8 +609,13 @@ section {
         display: block;
     }
 
+    .btn-cta {
+        display: none;
+    }
+
     .theme-toggle {
         margin-right: 1rem;
+        order: -1;
     }
 
     .burger.active .line1 {
@@ -612,10 +632,6 @@ section {
 
     .hero-content h1 {
         font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
     }
 
     .hero-buttons {
