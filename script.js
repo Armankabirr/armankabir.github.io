@@ -1,3 +1,15 @@
+// Preloader
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+        // Remove from DOM after animation
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    }, 500);
+});
+
 // Theme Toggle Functionality
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
