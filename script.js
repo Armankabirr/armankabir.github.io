@@ -18,11 +18,11 @@ themeToggle.addEventListener('click', () => {
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     
-    // Add rotation animation to button
-    themeToggle.style.transform = 'rotate(360deg)';
+    // Add subtle scale animation to button
+    themeToggle.style.transform = 'scale(0.95)';
     setTimeout(() => {
-        themeToggle.style.transform = 'rotate(0deg)';
-    }, 500);
+        themeToggle.style.transform = 'scale(1)';
+    }, 150);
 });
 
 // Mobile Navigation Toggle

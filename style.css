@@ -105,10 +105,11 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     transition: var(--transition);
     position: relative;
-    overflow: hidden;
+    width: 50px;
+    height: 40px;
 }
 
 .theme-toggle:hover {
@@ -120,25 +121,25 @@ body {
 .theme-toggle .moon-icon {
     font-size: 1.2rem;
     transition: transform 0.5s ease, opacity 0.3s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .theme-toggle .moon-icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg) scale(0);
     opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
 }
 
 [data-theme="dark"] .theme-toggle .sun-icon {
-    transform: rotate(-180deg) scale(0);
     opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
 }
 
 [data-theme="dark"] .theme-toggle .moon-icon {
-    position: relative;
-    left: auto;
-    transform: translateX(0) rotate(0deg) scale(1);
     opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* Hero Section */
