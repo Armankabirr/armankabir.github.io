@@ -1,3 +1,30 @@
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to 'light'
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
+
+// Theme toggle with animation
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    // Add transition class for smooth animation
+    html.style.transition = 'background-color 0.3s ease';
+    
+    // Set new theme
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Add rotation animation to button
+    themeToggle.style.transform = 'rotate(360deg)';
+    setTimeout(() => {
+        themeToggle.style.transform = 'rotate(0deg)';
+    }, 500);
+});
+
 // Mobile Navigation Toggle
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');

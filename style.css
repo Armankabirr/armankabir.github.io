@@ -16,6 +16,16 @@
     --transition: all 0.3s ease;
 }
 
+[data-theme="dark"] {
+    --primary-color: #5dade2;
+    --secondary-color: #1a1a2e;
+    --accent-color: #e74c3c;
+    --text-color: #e0e0e0;
+    --text-light: #b0b0b0;
+    --bg-color: #0f0f1e;
+    --bg-light: #16213e;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -25,6 +35,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -84,6 +95,50 @@ body {
     background-color: white;
     margin: 5px;
     transition: var(--transition);
+}
+
+.theme-toggle {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    font-size: 1.2rem;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.theme-toggle .moon-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg) scale(0);
+    opacity: 0;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    position: relative;
+    left: auto;
+    transform: translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
 }
 
 /* Hero Section */
@@ -206,12 +261,17 @@ section {
 }
 
 .skill-card {
-    background-color: white;
+    background-color: var(--bg-color);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: var(--transition);
+    border: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+[data-theme="dark"] .skill-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card:hover {
@@ -241,11 +301,16 @@ section {
 }
 
 .project-card {
-    background-color: white;
+    background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    border: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+[data-theme="dark"] .project-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project-card:hover {
@@ -326,6 +391,13 @@ section {
     font-size: 1rem;
     font-family: inherit;
     transition: var(--transition);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .form-group input:focus,
@@ -402,6 +474,10 @@ section {
 
     .burger {
         display: block;
+    }
+
+    .theme-toggle {
+        margin-right: 1rem;
     }
 
     .burger.active .line1 {
