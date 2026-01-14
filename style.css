@@ -20,7 +20,7 @@ body {
 }
 .container {
     padding: 10px 10%;
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
 }
@@ -62,4 +62,16 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
     transition: 0.3s;
+}
+
+.header-text {
+    margin-top: 16%;
+    font-size: 35px;
+}
+.header-text h1 {
+    font-size: 50px;
+    margin-top: 15px;
+}
+span {
+    color: #ff0000;
 }
