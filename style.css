@@ -335,3 +335,58 @@ about */
     display: inline-block;
     background: #ff0000;
 }
+
+/* Footer */
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background: #121212;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Media Queries */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #header{
+        background-image: url(images/mobile_cover.jpg);
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 18px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff0000;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
