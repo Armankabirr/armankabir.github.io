@@ -37,12 +37,9 @@ nav {
 }
 
 nav h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    font-weight: 500;
     width: 120px;
     cursor: pointer;
-    color: #ffffff;
+    color: #ff0000;
 }
 nav ul li {
     display: inline-block;
