@@ -15,11 +15,11 @@
             <nav>
                 <h1>Arman.</h1>
                 <ul id="navbar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -149,7 +149,7 @@
             <a href="#" class="btn">See More</a>
         </div>
     </div>
-    <div id="con">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -157,19 +157,22 @@
                     <p><i class="fa-solid fa-envelope"></i> armanutsho12@gmail.com</p>
                     <div class="social-icons">
                         <a href="https://github.com/Armankabirr"><i class="fa-brands fa-square-github"></i></a>
-                        <a href="https://www.linkedin.com/in/arman-kabir-1a6914279/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/arman-kabir-1a6914279/"><i
+                                class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.facebook.com/Utsho12/"><i class="fa-brands fa-square-facebook"></i></a>
-                        <a href="https://www.instagram.com/armankabiir/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.instagram.com/armankabiir/"><i
+                                class="fa-brands fa-square-instagram"></i></a>
                     </div>
                     <a href="images/my-cv.pdf" class="btn btn2" download>Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn btn2">Send Message</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -180,6 +183,17 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzILvmKS_k7-o9XWmQojPd6ndtBOHGb9tTsUOul7Px81-tiNiKSKLjlbGiNblpDGW_r/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script> -->
 </body>
 
 </html>
