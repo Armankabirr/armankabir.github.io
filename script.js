@@ -1,3 +1,14 @@
+// Preloader
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('hide');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 600);
+    }
+});
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
