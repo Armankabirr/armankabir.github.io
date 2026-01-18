@@ -21,6 +21,7 @@ body {
     background-image: url(images/cover.jpg);
     background-size: cover;
     background-position: center;
+    padding-top: 80px;
 }
 .container {
     padding: 10px 10%;
@@ -34,6 +35,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav .container {
+    width: 100%;
+    padding: 0 10%;
 }
 
 nav h1 {
