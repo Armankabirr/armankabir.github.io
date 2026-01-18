@@ -39,10 +39,16 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     z-index: 1000;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav .container {
