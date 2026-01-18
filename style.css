@@ -21,7 +21,6 @@ body {
     background-image: url(images/cover.jpg);
     background-size: cover;
     background-position: center;
-    padding-top: 80px;
 }
 .container {
     padding: 10px 10%;
@@ -29,16 +28,17 @@ body {
     margin: auto;
     overflow: hidden;
 }
+
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
     backdrop-filter: blur(10px);
@@ -57,7 +57,7 @@ nav h1 {
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin-left: 10px 20px;
+    margin: 0 15px;
 }
 nav ul li a {
     text-decoration: none;
@@ -82,7 +82,8 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 16%;
+    margin-top: 20%;
+    padding-top: 60px;
     font-size: 35px;
 }
 .header-text h1 {
