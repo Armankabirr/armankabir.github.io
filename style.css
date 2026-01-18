@@ -39,9 +39,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 nav .container {
