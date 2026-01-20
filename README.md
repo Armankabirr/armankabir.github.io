@@ -2,7 +2,7 @@
 
 A clean, responsive personal portfolio website built with vanilla web technologies to showcase my skills and projects.
 
-**🌐 Live Demo:** [Insert Link Here]
+**🌐 Live Demo:** [https://armankabirr.github.io/armankabir.github.io/]
 
 ---
 
