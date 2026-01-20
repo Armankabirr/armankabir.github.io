@@ -1,4 +1,4 @@
-# 🚀 [Your Name]'s Portfolio
+# 🚀 Arman Kabir's Portfolio
 
 A clean, responsive personal portfolio website built with vanilla web technologies to showcase my skills and projects.
 
