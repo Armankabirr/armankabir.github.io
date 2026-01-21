@@ -33,4 +33,4 @@ Since this project is built with vanilla HTML/CSS/JS, you don't need to install 
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/portfolio-repo.git](https://github.com/your-username/portfolio-repo.git)
+   git clone (https://github.com/Armankabirr/armankabir.github.io.git)
