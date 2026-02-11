@@ -9,6 +9,42 @@ window.addEventListener('load', function() {
     }
 });
 
+// Header typing effect
+const typingEl = document.getElementById('typing-text');
+if (typingEl) {
+    const fullText = typingEl.dataset.text || typingEl.textContent;
+    const highlight = typingEl.dataset.highlight || '';
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const highlightStart = highlight ? fullText.indexOf(highlight) : -1;
+    const highlightEnd = highlightStart + highlight.length;
+
+    const renderTypedText = function(typed) {
+        if (highlightStart !== -1 && typed.length > highlightStart) {
+            const before = typed.slice(0, highlightStart);
+            const highlighted = typed.slice(highlightStart, Math.min(typed.length, highlightEnd));
+            const after = typed.slice(highlightEnd);
+            typingEl.innerHTML = `${before}<span>${highlighted}</span>${after}`;
+            return;
+        }
+        typingEl.textContent = typed;
+    };
+
+    if (reduceMotion) {
+        renderTypedText(fullText);
+    } else {
+        let index = 0;
+        typingEl.textContent = '';
+        const typeNext = function() {
+            index += 1;
+            renderTypedText(fullText.slice(0, index));
+            if (index < fullText.length) {
+                setTimeout(typeNext, 90);
+            }
+        };
+        setTimeout(typeNext, 400);
+    }
+}
+
 // Scroll to Top Button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
